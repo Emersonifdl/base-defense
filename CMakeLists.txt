@@ -13,6 +13,7 @@ include_directories(include)
 # Define the sources
 set(SOURCES
     src/Game.cpp
+    src/Entities/Player.cpp
     main.cpp
 )
 
