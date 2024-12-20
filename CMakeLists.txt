@@ -13,7 +13,9 @@ include_directories(include)
 # Define the sources
 set(SOURCES
     src/Game.cpp
+    src/Utils.cpp
     src/Entities/Player.cpp
+    src/Entities/Bullet.cpp
     main.cpp
 )
 
@@ -22,7 +24,6 @@ find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
 
 # Add the executable
 add_executable(BaseDefense ${SOURCES})
-
 
 # Link libraries (if any)
 target_link_libraries(BaseDefense sfml-graphics)
