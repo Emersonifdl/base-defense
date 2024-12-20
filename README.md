@@ -8,7 +8,8 @@ O objetivo é do jogo é sobreviver o máximo de tempo possível, protegendo a b
 - TODO
 
 ## Requisitos
-- TODO
+- CMake
+- SFML 2.5
 
 ## Instalação
 1. Clone o repositório:
@@ -19,15 +20,31 @@ O objetivo é do jogo é sobreviver o máximo de tempo possível, protegendo a b
     ```sh
     cd base-defense
     ```
+3. Crie um diretório para os arquivos de compilação:
+    ```sh
+    mkdir build
+    ```
+4. Navegue até o diretório de compilação:
+    ```sh
+    cd build
+    ```
+5. Execute o CMake:
+    ```sh
+    cmake ..
+    ```
+6. Compile o projeto:
+    ```sh
+    make
+    ```
+7. Execute o jogo:
+    ```sh
+    ./BaseDefense
+    ```
 
 ## Como Jogar
-1. Execute o jogo:
-    ```sh
-    ./base-defense
-    ```
-2. Use o clique do mouse para movimentar o personagem.
-3. Use o espaço para atirar.
-4. Defenda sua base o máximo de tempo possível!
+1. Use o clique do mouse para movimentar o personagem.
+2. Use o espaço para atirar.
+3. Defenda sua base o máximo de tempo possível!
 
 ## Contribuição
 1. Faça um fork do projeto
