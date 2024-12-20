@@ -18,13 +18,23 @@ void Game::processEvents() {
         if (event.type == sf::Event::Closed) {
             window.close();
         }
+
+        if(sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
+            sf::Vector2f destination = window.mapPixelToCoords(mousePosition);
+            player.setDestination(destination);
+        }
     }
 }
 
 void Game::update() {
+    float deltaTime  = clock.restart().asSeconds();
+
+    player.update(deltaTime);
 }
 
 void Game::render() {
     window.clear();
+    player.render(window);
     window.display();
 }
