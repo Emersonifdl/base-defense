@@ -2,6 +2,7 @@
 #include "../include/Entities/Player.hpp"
 #include "../include/Entities/Bullet.hpp"
 #include "../include/Utils.hpp"
+#include <iostream>
 
 Player::Player()
 {
@@ -29,16 +30,11 @@ void Player::shoot(std::vector<Bullet> &bullets, sf::Vector2f target)
     }
 }
 
-void Player::update(float deltaTime)
-{
-    sf::Vector2f direction = normalize(destination - shape.getPosition());
-    if (distance(shape.getPosition(), destination) > 1.f)
-    {
-        shape.move(direction * PLAYER_SPEED * deltaTime);
-    }
-}
+void Player::update(float deltaTime) {
+    sf::Vector2f direction = destination - shape.getPosition();
 
-void Player::render(sf::RenderWindow &window)
-{
-    window.draw(shape);
+    if (distance(shape.getPosition(), destination) > 1)
+    {
+        shape.move(normalize(direction) * PLAYER_SPEED * deltaTime);
+    }
 }

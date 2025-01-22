@@ -16,6 +16,7 @@ set(SOURCES
     src/Utils.cpp
     src/Entities/Player.cpp
     src/Entities/Bullet.cpp
+    src/Entities/Enemy.cpp
     main.cpp
 )
 

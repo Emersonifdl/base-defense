@@ -16,8 +16,3 @@ void Bullet::update(float deltaTime)
 {
     shape.move(velocity * deltaTime);
 }
-
-void Bullet::render(sf::RenderWindow &window)
-{
-    window.draw(shape);
-}
